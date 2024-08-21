@@ -1,6 +1,8 @@
+import prismadb from "@/lib/prismadb";
+
 const { PrismaClient } = require("@prisma/client");
 
-const db = new PrismaClient();
+const db =  PrismaClient();
 
 async function main() {
   try {
@@ -21,5 +23,6 @@ async function main() {
     await db.$disconnect();
   }
 }
+
 
 main();
